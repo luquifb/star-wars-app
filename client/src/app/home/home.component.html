@@ -1,8 +1,15 @@
-<div style="text-align:center">
-  <h1>Welcome to {{title}}!</h1>
+<div class="container">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Welcome to {{title}}!</h1>
+      <p class="lead text-muted">Here you will find everything about the films and characters of the Star Wars saga.</p>
+      <p>
+        <button [routerLink]="['/film-list']" class="btn btn-primary">See SW Movies</button>
+      </p>
+    </div>
+  </section>
 
   <app-characters></app-characters>
-
-  <button [routerLink]="['/movies-list']">Movies List</button>
 
 </div>

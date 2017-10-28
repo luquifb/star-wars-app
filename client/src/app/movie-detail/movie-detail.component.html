@@ -1,3 +1,12 @@
-<p>
-  movie-detail works!
-</p>
+<div class="container">
+  <section *ngIf="films">
+    <h2>Films:</h2>
+    <div >
+      <h4>{{film.title}}</h4>
+      <p><b>Episode: </b>{{film.episode_id}}</p>
+      <p><b>Director: </b>{{film.director}}</p>
+      <p><b>Producer: </b>{{film.producer}}</p>
+      <p><b>Description: </b>{{film.opening_crawl}}</p>
+    </div>
+  </section>
+</div>

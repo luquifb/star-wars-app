@@ -1,18 +1,23 @@
 <div class="container">
 
-  <!-- <div class="searcher">
-    <label for="film"></label>
-    <input [(ngModel)]="film" placeholder="Search.." type="text">
-  </div> -->
+  <div class="text-center">
+    <h2>SW All Times Movies</h2>
 
-  <section *ngIf="films">
-    <h2>Films:</h2>
-    <div *ngFor="let film of films | filmSearcher:'title':film">
-      <h4>{{film.title}}</h4>
-      <p><b>Episode: </b>{{film.episode_id}}</p>
-      <p><b>Director: </b>{{film.director}}</p>
-      <p><b>Producer: </b>{{film.producer}}</p>
-      <p><b>Description: </b>{{film.opening_crawl}}</p>
+    <div class="form-inline my-2 my-lg-0">
+      <label for="film"></label>
+      <input class="form-control mr-sm-2" [(ngModel)]="film" placeholder="Search Film" type="text">
     </div>
-  </section>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="row" *ngIf="films">
+    <div class="col-6 col-lg-4" *ngFor="let film of films | filmSearcher : 'title' : film">
+      <h3>{{film.title}} <span>({{film.release_date | date: 'yyyy'}})</span></h3>
+      <p>{{film.opening_crawl}}</p>
+      <p><strong>Director:</strong> {{film.director}}</p>
+      <p><a [routerLink]="['../','film', film]" class="btn btn-secondary">View details &raquo;</a></p>
+    </div>
+  </div>
 </div>

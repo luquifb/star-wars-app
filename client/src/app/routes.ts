@@ -7,7 +7,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
-  { path: 'movies-list',  component: MoviesListComponent },
-  { path: 'movie/:id', component: MovieDetailComponent },
+  { path: 'film-list',  component: MoviesListComponent },
+  { path: 'film/:id', component: MovieDetailComponent },
   { path: '**', redirectTo: '' }
 ];

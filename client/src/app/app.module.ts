@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { routes } from './routes';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
@@ -29,6 +30,7 @@ import { FilmSearcherPipe } from './pipes/film-searcher.pipe';
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [MoviesService],

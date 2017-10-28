@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { MoviesService } from '../services/movies.service';
 import { Http } from '@angular/http';
+import { MoviesService } from '../services/movies.service';
 
 @Component({
   selector: 'app-movies-list',
@@ -9,11 +9,9 @@ import { Http } from '@angular/http';
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit {
-filmName: string;
-films ;
+films;
 
-
-constructor(private router: Router, private http: Http) { }
+constructor(private router: Router, private http: Http, private moviesServ: MoviesService) { }
 
 ngOnInit() {
   this.http.get('https://swapi.co/api/films')
@@ -21,6 +19,6 @@ ngOnInit() {
     if(res.status)
       this.films = res.json().results;
   });
-
+    // this.films = this.moviesServ.getFilms();
   }
 }
