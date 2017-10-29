@@ -1,4 +1,15 @@
 .jumbotron {
   color: #FFF;
-  background-image: url("http://www.thestarwarstrilogy.com/starwars/image.axd?picture=%2F2016%2F01%2FAfter.jpg");
+  background-image: url("/assets/home4.jpg");
+  height: 450px;
+}
+
+.text {
+  color: #e5e5e5;
+  margin: 15px;
+}
+
+.btn {
+  font-family: 'Poller One', cursive;
+  background-color: #f2f2f2;
 }

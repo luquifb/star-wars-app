@@ -1,11 +1,4 @@
-span {
-  font-size: 0.8em;
-  color: #555;
-}
-
 .jumbotron {
-  background-image: url("https://milnersblog.files.wordpress.com/2015/09/the-characters-of-star-wars-the-force-awakens-milnersblog.jpg?w=672&h=372&crop=1");
+  background-image: url("/assets/characters-sw.jpg");
   color: #FFF;
 }
-
-/*http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2016/04/9781465448859-1536x864-110876469872.jpg*/

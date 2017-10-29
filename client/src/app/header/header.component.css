@@ -1,6 +1,6 @@
-/*nav {
-  background-image: url("http://www.thestarwarstrilogy.com/starwars/image.axd?picture=%2F2016%2F01%2FAfter.jpg");
-}*/
+nav {
+  background-image: url("/assets/space2.jpeg");
+}
 
 .logo {
   width: 80px;

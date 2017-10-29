@@ -1,17 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poller One', cursive;
+  margin: 20px 0;
+}
+
 .container {
   padding: 30px;
 }
 
-h2 {
-  margin: 30px;
+.cta {
+  background-image: url("/assets/space.png");
+  color: #FFF;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poller One', cursive;
+span {
+  font-size: 0.8em;
+  color: #e5e5e5;
 }
-
-/*body {
-  background-image: url("https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png");
-  position: relative;
-}*/

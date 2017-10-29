@@ -1,5 +1,13 @@
 <div class="container">
   <h2 class="text-center">SW Main Characters</h2>
+  <div class="column">
+    <img class="icon" src="/assets/clone-trooper.png" alt="Clone Trooper">
+    <img class="icon" src="/assets/admiral-ackbar.png" alt="Admiral Ackbar">
+    <img class="icon" src="/assets/chewbacca.png" alt="Chewbacca">
+    <img class="icon" src="/assets/darth-maul.png" alt="Darth Maul">
+    <img class="icon" src="/assets/c3p0.png" alt="C3p0">
+
+  </div>
 
   <div class="card-columns" *ngIf="characters">
 
@@ -8,7 +16,7 @@
       <div class="card-block">
         <h4 class="card-title">{{character.name}}</h4>
         <p class="card-text"><small class="text-muted">First Appearance: {{character.birth_year}}</small></p>
-        <p><a [routerLink]="['../','character', character.url[character.url.length-2]]" class="btn btn-secondary">View details &raquo;</a></p>
+        <p><a [routerLink]="['../','character', character.url[character.url.length-2]]" class="btn cta btn-secondary">View details &raquo;</a></p>
       </div>
     </div>
 

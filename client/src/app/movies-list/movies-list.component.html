@@ -5,7 +5,7 @@
 
     <div class="">
       <label for="film"></label>
-      <input class="form-control mr-sm-2" [(ngModel)]="film" placeholder="Search Film" type="text">
+      <input class="form-control" [(ngModel)]="film" placeholder="Search your favourite one.." type="text">
     </div>
   </div>
 
@@ -15,11 +15,9 @@
   <div class="row" *ngIf="films">
     <div class="col-12 col-lg-3" *ngFor="let film of films | filmSearcher : 'title' : film">
       <h4>{{film.title}} <span>({{film.release_date | date: 'yyyy'}})</span></h4>
-      <!-- <p class="hidden-sm-down">{{film.opening_crawl}}</p> -->
       <p><strong>Director:</strong> {{film.director}}</p>
       <p><strong>Producer:</strong> {{film.producer}}</p>
-      <p><a [routerLink]="['../','film', film.url[film.url.length-2]]" class="btn btn-secondary">View details &raquo;</a></p>
-      <!-- <p><a (click)=getUrl(film.url) class="btn btn-secondary">View details &raquo;</a></p> -->
+      <p><a [routerLink]="['../','film', film.url[film.url.length-2]]" class="btn cta btn-secondary">View details &raquo;</a></p>
     </div>
   </div>
 </div>
