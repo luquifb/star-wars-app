@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { MoviesService } from '../services/movies.service';
 import { Http } from '@angular/http';
+import { CharactersService } from '../services/characters.service';
 
 @Component({
   selector: 'app-characters',
@@ -10,14 +10,14 @@ import { Http } from '@angular/http';
 })
 export class CharactersComponent implements OnInit {
   people: Array<object>;
+  characters;
 
-  constructor(private router: Router, private http: Http) { }
+  constructor(private router: Router, private http: Http, public charactersServ: CharactersService) { }
 
   ngOnInit() {
-    this.http.get('https://swapi.co/api/people')
-    .subscribe(res => {
-      if(res.status)
-        this.people = res.json().results;
+    this.charactersServ.getCharacters()
+    .subscribe(characters => {
+      this.characters = characters.results;
     });
   }
 

@@ -17,7 +17,8 @@
       <h3>{{film.title}} <span>({{film.release_date | date: 'yyyy'}})</span></h3>
       <p>{{film.opening_crawl}}</p>
       <p><strong>Director:</strong> {{film.director}}</p>
-      <p><a [routerLink]="['../','film', film]" class="btn btn-secondary">View details &raquo;</a></p>
+      <p><a [routerLink]="['../','film', film.url[film.url.length-2]]" class="btn btn-secondary">View details &raquo;</a></p>      
+      <!-- <p><a (click)=getUrl(film.url) class="btn btn-secondary">View details &raquo;</a></p> -->
     </div>
   </div>
 </div>

@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MoviesService } from './services/movies.service';
 import { CharactersComponent } from './characters/characters.component';
 import { FilmSearcherPipe } from './pipes/film-searcher.pipe';
+import { CharactersService } from './services/characters.service';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { FilmSearcherPipe } from './pipes/film-searcher.pipe';
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [MoviesService],
+  providers: [MoviesService, CharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

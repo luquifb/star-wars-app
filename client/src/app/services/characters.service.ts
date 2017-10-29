@@ -5,20 +5,20 @@ import 'rxjs/add/operator/map';
 import { environment }  from '../../environments/environment';
 
 @Injectable()
-export class MoviesService {
+export class CharactersService {
 
   public BASEURL = environment.BASEURL;
 
   constructor(private http: Http) {
     }
 
-  getMovies() {
-    return this.http.get(`${this.BASEURL}/films`)
-          .map((res) => res.json());
+  getCharacters() {
+    return this.http.get(`${this.BASEURL}/people`)
+      .map ((res) => res.json());
   }
-
-  getMovie(id) {
-    return this.http.get(`${this.BASEURL}/films/${id}`)
+  
+  getCharacter(id) {
+    return this.http.get(`${this.BASEURL}/people/${id}`)
       .map((res) => res.json());
   }
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-// import { MoviesService } from '../services/movies.service';
-import { Http } from '@angular/http';
+import { MoviesService } from '../services/movies.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-detail',
@@ -9,16 +8,20 @@ import { Http } from '@angular/http';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
-  filmName: string;
-  films ;
+  film;
 
-  constructor(private router: Router, private http: Http) { }
+  constructor(private route:ActivatedRoute, public moviesServ: MoviesService) { }
 
   ngOnInit() {
-    this.http.get('https://swapi.co/api/films')
-    .subscribe(res => {
-      if(res.status)
-        this.films = res.json().results;
-    });
+    this.route.params
+      .subscribe(params => {
+        this.getMovie(params['id']);
+      });
   }
+
+  getMovie(id) {
+    this.moviesServ.getMovie(id)
+      .subscribe((film) => this.film = film);
+  }
+
 }
