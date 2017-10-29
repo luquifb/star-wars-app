@@ -15,6 +15,7 @@ import { MoviesService } from './services/movies.service';
 import { CharactersComponent } from './characters/characters.component';
 import { FilmSearcherPipe } from './pipes/film-searcher.pipe';
 import { CharactersService } from './services/characters.service';
+import { CharacterComponent } from './character/character.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CharactersService } from './services/characters.service';
     HeaderComponent,
     FooterComponent,
     CharactersComponent,
-    FilmSearcherPipe
+    FilmSearcherPipe,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

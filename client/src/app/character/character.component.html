@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{character.name}} <span>({{character.gender}})</span></h1>
+    <p>{{character.birth_year}}</p>
+  </div>
+</div>
+
+<div class="container">
+  <section *ngIf="character">
+    <h2>Data Sheet:</h2>
+    <div>
+      <p><strong>Height:</strong> <i>{{character.height}} cm</i></p>
+      <p><strong>Mass:</strong> <i>{{character.mass}} kg</i></p>
+      <p><strong>Eye Color: </strong> <i>{{character.eye_color}}</i></p>
+      <p><strong>Hair Color: </strong><i>{{character.hair_color}}</i></p>
+      <p><strong>Skin Color: </strong><i>{{character.skin_color}}</i></p>
+    </div>
+  </section>
+</div>

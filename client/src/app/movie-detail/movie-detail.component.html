@@ -1,12 +1,18 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{film.title}} <span>({{film.release_date | date: 'yyyy'}})</span></h1>
+    <p><strong>Synopsis: </strong>{{film.opening_crawl}}</p>
+  </div>
+</div>
+
 <div class="container">
   <section *ngIf="film">
-    <h2>Film Data:</h2>
+    <!-- <h2>Film Data:</h2> -->
     <div>
-      <h4>{{film.title}}</h4>
-      <p><b>Episode: </b>{{film.episode_id}}</p>
-      <p><b>Director: </b>{{film.director}}</p>
-      <p><b>Producer: </b>{{film.producer}}</p>
-      <p><b>Description: </b>{{film.opening_crawl}}</p>
+      <h4>More Info:</h4>
+      <p><strong>Episode: </strong><i>{{film.episode_id}}</i></p>
+      <p><strong>Director: </strong><i>{{film.director}}</i></p>
+      <p><strong>Producer: </strong><i>{{film.producer}}</i></p>
     </div>
   </section>
 </div>

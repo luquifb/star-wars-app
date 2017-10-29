@@ -6,3 +6,12 @@
 h2 {
   margin: 30px;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poller One', cursive;
+}
+
+/*body {
+  background-image: url("https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png");
+  position: relative;
+}*/

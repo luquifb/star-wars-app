@@ -10,9 +10,8 @@ import { MoviesService } from '../services/movies.service';
 })
 export class MoviesListComponent implements OnInit {
 films;
-film;
-url;
-constructor(private router: Router, private http: Http, public moviesServ: MoviesService) { }
+
+constructor(private router: Router, public moviesServ: MoviesService) { }
 
 ngOnInit() {
     this.moviesServ.getMovies()
@@ -21,12 +20,4 @@ ngOnInit() {
     });
   }
 
-  // getUrl(url){
-  //   console.log(url)
-  //   this.http.get("https://swapi.co/api/films/1")
-  //   .subscribe(res => {
-  //     if(res.status)
-  //       this.film = res.json().results;
-  //   });
-  // }
 }

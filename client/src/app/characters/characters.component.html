@@ -1,41 +1,16 @@
 <div class="container">
-  <h2 class="text-center">Meet all the SW characters</h2>
+  <h2 class="text-center">SW Main Characters</h2>
 
   <div class="card-columns" *ngIf="characters">
 
-    <div class="card" *ngFor="let character of characters">
+    <div class="card text-center" *ngFor="let character of characters">
       <!-- <img class="card-img-top img-fluid" src="..." alt="image"> -->
       <div class="card-block">
         <h4 class="card-title">{{character.name}}</h4>
-        <p class="card-text"><strong>Gender:</strong> <i>{{character.gender}}</i></p>
-        <p class="card-text"><strong>Height:</strong> <i>{{character.height}} cm</i></p>
-        <p class="card-text"><strong>Mass:</strong> <i>{{character.mass}} kg</i></p>
         <p class="card-text"><small class="text-muted">First Appearance: {{character.birth_year}}</small></p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-          More Info
-        </button>
+        <p><a [routerLink]="['../','character', character.url[character.url.length-2]]" class="btn btn-secondary">View details &raquo;</a></p>
       </div>
     </div>
 
-  </div>
-</div>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{character.name}}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
   </div>
 </div>
